@@ -6,7 +6,7 @@ void sapper()
 {
     int i,j,count,x,y;
     cin>>i>>j>>count;
-    i++;
+    i+=2;
     j+=2;
     string arr[i][j];
     
@@ -27,7 +27,7 @@ void sapper()
         arr[x+1][y+1]='*';
     }
     if(count==0){
-        for(int i1=1;i1<i;i1++)
+        for(int i1=1;i1<i-1;i1++)
         {
             for(int j1=1;j1<j-1;j1++)
             {
@@ -41,7 +41,7 @@ void sapper()
     for(int i1=1;i1<i-1;i1++)
     {
         
-        for(int j1=1;j1<j;j1++)
+        for(int j1=1;j1<j-1;j1++)
         {
             if(arr[i1][j1]=="*" )
             {
@@ -83,16 +83,11 @@ void sapper()
             }
         }
     }
-//хардкор метод проверки
-//cout<<"* "<<2<<endl;
-//cout<<2<<" *"<<endl;
-//cout<<1<<" "<<1<<endl;
 
-    for(int i1=1;i1<i;i1++)
+    for(int i1=1;i1<i-1;i1++)
     {
         for(int j1=1;j1<j-1;j1++)
         {
-//попробуем конвертировать из string в int
             if(arr[i1][j1]!="*"){
                 cout<<atoi(arr[i1][j1].c_str())<<" ";
             }else{
@@ -101,12 +96,10 @@ void sapper()
         }
         cout << endl;
     }
-    cout << endl;
 }
 
 int main()
 {
-
-    mina();
+mina();
 return 0;
 }
